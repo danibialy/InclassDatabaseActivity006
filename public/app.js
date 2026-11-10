@@ -27,7 +27,26 @@ function addPaintingToList(painting) {
   link.href = '#';
   link.className = 'button';
   link.textContent = painting.Title;
+  
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
+    showForm(painting);
+  });
 
   item.append(img, link);
   list.append(item);
+}
+
+function showForm(painting) {
+  placeholder.hidden = true;
+  form.hidden = false;
+
+  form.action = '/api/paintings/' + painting.PaintingID;
+  document.getElementById('paintingIdText').textContent = painting.PaintingID;
+
+  FIELDS.forEach((name) => {
+    const value = painting[name] ?? '';
+    form.elements[name].value = value;
+    form.elements[name].defaultValue = value;
+  });
 }
