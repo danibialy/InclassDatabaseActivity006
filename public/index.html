@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Paintings</title>
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+  <header>
+    <h1>Paintings</h1>
+  </header>
+
+  <main>
+    <aside id="paintingList"></aside>
+
+    <section id="editor">
+      <p id="placeholder">Select a painting from the list.</p>
+
+      <form id="paintingForm" action="/api/paintings" method="post" hidden>
+        <h2>Edit painting #<span id="paintingIdText"></span></h2>
+
+        <fieldset>
+          <legend>Basic information</legend>
+          <label>Title <input type="text" name="Title" required></label>
+          <label>Year of work <input type="number" name="YearOfWork"></label>
+          <label>Medium <input type="text" name="Medium"></label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Size and price</legend>
+          <label>Width <input type="number" name="Width"></label>
+          <label>Height <input type="number" name="Height"></label>
+          <label>Cost <input type="number" name="Cost" step="any"></label>
+          <label>MSRP <input type="number" name="MSRP" step="any"></label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Museum information</legend>
+          <label>Accession number <input type="text" name="AccessionNumber"></label>
+          <label>Copyright <input type="text" name="CopyrightText"></label>
+          <label>Museum link <input type="text" name="MuseumLink"></label>
+          <label>Wikipedia link <input type="text" name="WikiLink"></label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Description</legend>
+          <label>Excerpt <textarea name="Excerpt" rows="3"></textarea></label>
+          <label>Description <textarea name="Description" rows="6"></textarea></label>
+        </fieldset>
+
+        <button type="submit">Save</button>
+        <button type="reset">Reset</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="static/app.js"></script>
+</body>
+</html>
