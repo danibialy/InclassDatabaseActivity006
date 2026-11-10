@@ -1,0 +1,25 @@
+{
+  "name": "inclassdatabaseactivity006",
+  "version": "1.0.0",
+  "description": "List of paintings with an edit form that updates a SQLite database",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danibialy/InclassDatabaseActivity006.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/danibialy/InclassDatabaseActivity006/issues"
+  },
+  "homepage": "https://github.com/danibialy/InclassDatabaseActivity006#readme",
+  "dependencies": {
+    "better-sqlite3": "^13.0.3",
+    "express": "^5.3.0"
+  }
+}
