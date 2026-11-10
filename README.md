@@ -55,3 +55,5 @@ This project focuses on integrating database on the server side into a HTML appl
 * Focus on Details: Pay attention to small details like spacing, hover effects, to create a polished final product.
 
 
+
+
